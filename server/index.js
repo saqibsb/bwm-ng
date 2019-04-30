@@ -5,7 +5,7 @@ const Rental=require('./models/rental');
 const FakeDB=require('./fake-db');
 
 const rentalRoute=require('./routes/rentals');
-mongoose.connect(config.DB_URI, { useNewUrlParser: true }).then(()=>{
+mongoose.connect(config.DB_URI,{ useNewUrlParser: true }).then(()=>{
   const fakeDb=new FakeDB();
   fakeDb.seedDB();
 });

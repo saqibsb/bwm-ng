@@ -35,9 +35,11 @@ class fakeDb{
                   dailyRate: 23
 }]
 }
-async cleanDB(){
-    await Rental.remove({});
+ async cleanDB(){
 
+  await Rental.deleteMany({});
+     
+      
 }
 pushRentalsToDB(){
     this.rentals.forEach((rental)=>{
